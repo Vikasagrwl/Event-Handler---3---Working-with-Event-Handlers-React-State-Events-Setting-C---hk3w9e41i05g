@@ -3,11 +3,15 @@ import '../styles/App.css';
 const App = () => {
 
   const handleInput = (event) =>{
-   // use console.log
-     console.log(event.target.value)
+    const val=event.target.value;
+    console.log("Input in #text-input is "+val);
   }
 
-  // do not change id of input elements
+  const handleNumInput = (event) =>{
+    const val=event.target.value;
+    console.log("Input in #num-input is "+val);
+  }
+
   return (
     <div id="main">
       <label htmlFor='text-input'>Text Input:- </label>
@@ -17,7 +21,7 @@ const App = () => {
       <br/>
 
       <label htmlFor='num-input'>Number input</label>
-      <input id="num-input"  type={'number'} onChange={handleInput}/>
+      <input id="num-input"  type={'number'} onChange={handleNumInput}/>
       <br/>
     </div>
   )
